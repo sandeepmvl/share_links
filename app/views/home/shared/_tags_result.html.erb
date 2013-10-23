@@ -1,0 +1,9 @@
+<% unless @links_tags.blank? %>
+<tr>
+  <th rowspan="<%= @links_tags.count %>" style="width:20%;">Tags</th>
+  <% @links_tags.each do |l| %>
+
+      <td>   <%= link_to l.tags,"#" %><br/></td>
+      </tr>
+  <% end %>
+<% end %>

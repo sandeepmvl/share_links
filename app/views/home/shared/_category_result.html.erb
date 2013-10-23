@@ -1,0 +1,9 @@
+<% unless @links_categories.blank? %>
+<tr>
+  <th rowspan="<%= @links_categories.count %>" style="width:20%;">Category</th>
+  <% @links_categories.each do |l| %>
+
+      <td>   <%= link_to l.category,"#" %><br/></td>
+      </tr>
+  <% end %>
+<% end %>

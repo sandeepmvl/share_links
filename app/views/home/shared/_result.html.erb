@@ -1,0 +1,25 @@
+<% unless params[:search].blank? %>
+    <% unless @links.blank? && @links_categories.blank? && @links_tags.blank? %>
+        <div>" <%= @total %> " results found </div>
+        <table class="table table-bordered">
+          <thead>
+          <tr>
+            <th>Search By</th>
+            <th>Result</th>
+          </tr>
+          </thead>
+          <tbody>
+          <%= render "/home/shared/name_result" %>
+          <%= render "/home/shared/category_result" %>
+          <%= render "/home/shared/tags_result" %>
+          </tbody>
+        </table>
+        </div>
+
+    <% else %>
+        <div>Sorry, no result found with you search keyword "<span class="danger"><%= params[:search] %></span>"</div>
+    <% end %>
+
+<% end %>
+
+

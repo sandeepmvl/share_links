@@ -1,0 +1,21 @@
+<% unless @links.blank? %>
+<tr>
+  <th rowspan="<%= @links.count %>" style="width:20%;">Name</th>
+  <% @links.each do |l| %>
+
+      <td>
+        <label id="hover_<%= l.id %>"><%= link_to l.name,"#" %></label></td>
+      </tr>
+      <script>
+          $(document).ready(function () {
+              var hoverHTMLDemoBasic = '<p>'+'<%= l.url %>' +'</p>'
+              $("#hover_<%= l.id %>").hovercard({
+                  detailsHTML: hoverHTMLDemoBasic,
+                  width: 400,
+                  cardImgSrc: '/assets/rails.png'
+              });
+          });
+      </script>
+  <% end %>
+<% else %>
+<% end %>

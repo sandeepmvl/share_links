@@ -1,9 +1,10 @@
 class LinksController < ApplicationController
   layout 'link'
+  before_filter :authenticate_user!
   # GET /links
   # GET /links.json
   def index
-    @links = Link.all
+    @links = current_user.links
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,7 +15,7 @@ class LinksController < ApplicationController
   # GET /links/1
   # GET /links/1.json
   def show
-    @link = Link.find(params[:id])
+    @link = current_user.links.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -35,7 +36,7 @@ class LinksController < ApplicationController
 
   # GET /links/1/edit
   def edit
-    @link = Link.find(params[:id])
+    @link = current_user.links.find(params[:id])
   end
 
   # POST /links

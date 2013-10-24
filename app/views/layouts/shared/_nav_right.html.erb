@@ -1,0 +1,17 @@
+<ul class="nav pull-right">
+  <li class="divider-vertical"></li>
+  <% unless user_signed_in? %>
+      <li><%= link_to "Login", "/users/sign_in"  %></li>
+  <% else %>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.email %> <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><%= link_to "Logout", "/users/sign_out", :method => :delete  %></li>
+        </ul>
+      </li>
+  <% end %>
+</ul>

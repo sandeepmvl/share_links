@@ -8,8 +8,10 @@ class CreateLinks < ActiveRecord::Migration
       t.string :category
       t.string :language
       t.string :country
+      t.integer :user_id
 
       t.timestamps
     end
+    add_index :links, :user_id
   end
 end

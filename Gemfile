@@ -8,6 +8,7 @@ gem 'rails', '3.2.13'
 
 group :development do
   gem 'sqlite3', '1.3.8'
+  gem 'rack-mini-profiler'
 end
 
 
@@ -28,6 +29,9 @@ gem 'jquery-rails'
 
 gem 'therubyracer'
 gem "less-rails"
+
+gem 'devise'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

@@ -1,4 +1,7 @@
 ShareLinks::Application.routes.draw do
+  resources :search_suggestions
+
+
   devise_for :users
 
   resources :links

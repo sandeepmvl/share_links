@@ -12,4 +12,5 @@
  *= require bootstrap_and_overrides
  *= require search
  *= require custom
+ *= require search_suggestions
  */

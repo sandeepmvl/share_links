@@ -25,7 +25,7 @@ group :assets do
   gem "twitter-bootstrap-rails"
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', "~> 2.3.0"
 
 gem 'therubyracer'
 gem "less-rails"

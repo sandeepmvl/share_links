@@ -1,12 +1,20 @@
-<div class="sidebar-nav">
-  <ul class="nav nav-list">
-    <!--<li class="nav-header">Sidebar</li>-->
-    <% unless params[:action] == "new" || params[:action] == "edit" %>
-        <%= link_to "Create New Link",new_link_path,:class => 'btn btn-primary' %>
-    <% else %>
-        <%= link_to "Cancel",links_path,:class => 'btn btn-warning' %>
-    <% end %>
-    <!--  <li><%#= link_to "Link2", "/path2"  %></li>
-    <li><%#= link_to "Link3", "/path3"  %></li>-->
-  </ul>
-</div><!--/.well -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>
+        	   <span class="pull-right">
+                 <% unless params[:action] == "new" || params[:action] == "edit" %>
+                    <a href="#" class="btn btn-default">Manage categories</a>
+                    <a href="#" class="btn btn-default">Arrange</a>
+                    <!--<a href="#" class="btn btn-lg btn-primary">
+                    <span class="glyphicon glyphicon-plus"></span> Create new</a>-->
+                     <%= link_to "Create New Link",new_link_path,:class => 'btn btn-lg btn-primary' %>
+                 <% else %>
+                         <%= link_to "Cancel",links_path,:class => 'btn btn-warning' %>
+                     <% end %>
+                </span>
+      </h1>
+    </div>
+  </div>
+</div>

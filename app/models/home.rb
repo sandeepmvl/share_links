@@ -9,5 +9,8 @@ class Home < ActiveRecord::Base
 
   def Link.search_by_tags(term)
     where("tags like :term", term: "%#{term}%")
+    end
+  def Link.search_by_all(term)
+    where("tags like :term or category like:term or tags like:term", term: "%#{term}%")
   end
 end

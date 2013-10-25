@@ -1,9 +1,23 @@
 <% unless @links_tags.blank? %>
-<tr>
-  <th rowspan="<%= @links_tags.count %>" style="width:20%;">Tags</th>
-  <% @links_tags.each do |l| %>
+    <% @links_tags.each do |l| %>
+        <tr>
+          <td>
+            <h4>
+              <%= l.name %>
+            </h4>
+            <p>
+              <a href="<%= l.url %>" target="_blank"><%= l.url %></a>
+            </p>
+            <p><%= l.category %></p>
+            <span class="label label-default hglt"><%= l.tags %></span>
+          </td>
 
-      <td>   <%= link_to l.tags,"#" %><br/></td>
-      </tr>
-  <% end %>
+          <td><%= l.created_at %></td>
+          <td>1</td>
+          <td><%= l.user.email %></td>
+        </tr>
+        <script>
+            $(".hglt").highlight("<%= params[:search] %>");
+        </script>
+    <% end %>
 <% end %>

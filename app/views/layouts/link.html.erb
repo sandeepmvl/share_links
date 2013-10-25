@@ -42,13 +42,11 @@
 
 <div class="container-fluid">
   <div class="row-fluid">
-    <div class="span9">
+    <div class="span11">
       <%= bootstrap_flash %>
+      <%= render "layouts/shared/links_side_nav" %>
       <%= yield %>
     </div>
-    <div class="span3">
-      <%= render "layouts/shared/links_side_nav" %>
-    </div><!--/span-->
   </div><!--/row-->
   <%= render "layouts/shared/footer" %>
 

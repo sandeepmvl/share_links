@@ -1,10 +1,10 @@
 <% unless params[:search].blank? %>
     <% unless @links.blank? && @links_categories.blank? && @links_tags.blank? %>
-        <div>" <%= @total %> " results found </div>
+        <h3>"<%= params[:search] %>" - results 1-<%= @total %>  from <%= @total %> </h3>
         <table class="table table-bordered">
           <thead>
           <tr>
-            <th>Search By</th>
+            <th>Results Found By</th>
             <th>Result</th>
           </tr>
           </thead>

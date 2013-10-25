@@ -1,16 +1,15 @@
-<% unless @links_categories.blank? %>
-    <% @links_categories.each do |l| %>
-
+<% unless @links_all.blank? %>
+    <% @links_all.each do |l| %>
         <tr>
           <td>
-            <h4>
+            <h4 class=".hglt">
               <%= l.name %>
             </h4>
             <p>
               <a href="<%= l.url %>" target="_blank"><%= l.url %></a>
             </p>
-            <p class="hglt"><%= l.category %></p>
-            <span class="label label-default"><%= l.tags %></span>
+            <p class=".hglt"><%= l.category %></p>
+            <span class="label label-default hglt"><%= l.tags %></span>
           </td>
 
           <td><%= l.created_at %></td>
@@ -22,3 +21,5 @@
         </script>
     <% end %>
 <% end %>
+
+

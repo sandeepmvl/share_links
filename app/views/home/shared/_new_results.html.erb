@@ -1,0 +1,85 @@
+<% unless params[:search].blank? %>
+    <% unless @links.blank? && @links_categories.blank? && @links_tags.blank? %>
+
+        <div id="tab" class="btn-group" data-toggle="buttons-radio">
+          <a href="#all" class="btn active" data-toggle="tab">All</a>
+          <a href="#name" class="btn" data-toggle="tab">Name</a>
+          <a href="#category" class="btn" data-toggle="tab">Category</a>
+          <a href="#tags" class="btn"  data-toggle="tab">Tags</a>
+        </div>
+
+        <div class="tab-content">
+          <div class="tab-pane active" id="all">
+            <h3>"<%= params[:search] %>" - results 1-<%= @total %>  from <%= @total %> </h3>
+            <table class="table table-striped table-condensed">
+              <thead>
+              <tr>
+                <th></th>
+                <th>Date</th>
+                <th>Number of views</th>
+                <th>Created by</th>
+              </tr>
+              </thead>
+              <tbody>
+              <%= render "/home/shared/all_result" %>
+              </tbody>
+            </table>
+
+          </div>
+          <div class="tab-pane" id="name">
+            <h3>"<%= params[:search] %>" - results 1-<%= @total_name %>  from <%= @total %> </h3>
+            <table class="table table-striped table-condensed">
+              <thead>
+              <tr>
+                <th></th>
+                <th>Date</th>
+                <th>Number of views</th>
+                <th>Created by</th>
+              </tr>
+              </thead>
+              <tbody>
+              <%= render "/home/shared/name_result" %>
+              </tbody>
+            </table>
+          </div>
+          <div class="tab-pane" id="category">
+            <h3>"<%= params[:search] %>" - results 1-<%= @total_category %>  from <%= @total %> </h3>
+            <table class="table table-striped table-condensed">
+              <thead>
+              <tr>
+                <th></th>
+                <th>Date</th>
+                <th>Number of views</th>
+                <th>Created by</th>
+              </tr>
+              </thead>
+              <tbody>
+              <%= render "/home/shared/category_result" %>
+              </tbody>
+            </table>
+          </div>
+          <div class="tab-pane" id="tags">
+            <h3>"<%= params[:search] %>" - results 1-<%= @total_tags %>  from <%= @total %> </h3>
+            <table class="table table-striped table-condensed">
+              <thead>
+              <tr>
+                <th></th>
+                <th>Date</th>
+                <th>Number of views</th>
+                <th>Created by</th>
+              </tr>
+              </thead>
+              <tbody>
+              <%= render "/home/shared/tags_result" %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!--To Highlight search keyword-->
+
+    <% else %>
+        <%= render "/home/shared/nothing_found" %>
+    <% end %>
+<% end %>
+
+

@@ -1,0 +1,9 @@
+<%= form_tag root_path,:id=>"custom-search-form", :class => "form-search form-horizontal", method: :get do %>
+    <div class="input-append span12">
+      <%= text_field_tag :search, params[:search],
+                         :type => "text",
+                         :class=>"search-query",
+                         :placeholder=>"Search Query" %>
+      <button type="submit" class="btn"><i class="icon-search"></i></button>
+    </div>
+<% end %>

@@ -1,0 +1,14 @@
+<div>
+  <h2>Nothing found!</h2>
+  <p>Your search "<b><%= params[:search] %></b>" did not match any record</p>
+
+  <p><b>Suggestions:</b></p>
+  <ul>
+    <li>Make sure all words are spelled correctly</li>
+    <li>Try different keywords</li>
+    <li>Try more general keywords</li>
+    <li>Try fewer keywords</li>
+    <!--<li>Make sure that results aren't restricted by your custom settings</li>-->
+  </ul>
+  <p>You can also try to search the same at <a href="https://www.google.co.in/search?output=search&sclient=psy-ab&q=s&btnG=#psj=1&q=<%= params[:search] %>" target="_blank">Google</a>
+</div>

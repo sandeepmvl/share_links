@@ -15,4 +15,15 @@
 //= require twitter/bootstrap
 //= require bootstrap
 //= require hovercard
+//= require highlight
+
+
+/*$(function () {
+
+  // Search form.
+  $('#custom-search-form').submit(function () {
+    $.get(this.action, $(this).serialize(), null, 'script');
+    return false;
+  });
+});*/
 

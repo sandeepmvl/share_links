@@ -4,7 +4,7 @@
     padding: 0;
 }
 #custom-search h2{
-    color: orangered;
+    color: firebrick;
 }
 
 #custom-search p{
@@ -52,7 +52,7 @@
   }
 
 #custom-search-form input, textarea, .uneditable-input {
-    width: 450px;
+    width: 50%;
 }
 
 .m1{
@@ -61,4 +61,13 @@
 
 .danger{
     color: red;
+}
+h3{
+    color: gray;
+}
+
+.highlight { background: #ff0; }
+
+h5{
+    color: indianred;
 }
